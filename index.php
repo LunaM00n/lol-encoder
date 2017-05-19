@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>LOL Encoder</title>
+	<meta charset="utf-8">
 </head>
 <body>
 
@@ -48,7 +49,9 @@ function base64decode(){
 <fieldset><b>Repeater</b> (@art0flunam00n)<br>
 String<br><textarea id="repeat"></textarea>
 Number of Repeat <input type="text" id="number"><br>
-<button type="button" onclick="repeaterFunction()">b64->en</button>
+<button type="button" onclick="repeaterFunction()">Repeat</button>
+<button type="button" onclick="clearFunction()">Clear</button>
+
 </fieldset>
 
 <script>
@@ -57,9 +60,32 @@ function repeaterFunction(){
 	var num=document.getElementById('number').value;
 	document.getElementById('repeat').value=input.repeat(num);
 }
+function clearFunction(){
+		document.getElementById('repeat').value="";
+}
 
 </script>
 
+<fieldset><b>Text Conversion</b> (Kyaw Thi Ha)<br>
+String<br><textarea id="gs"></textarea><br>
+<button type="button" onclick="toLowerCase()">toLower</button>
+<button type="button" onclick="toUpperCase()">toUpper</button><br>
+
+</fieldset>
+
+<script>
+function toLowerCase(){
+var os = document.getElementById("gs").value;
+var cs = os.toLowerCase();
+document.getElementById("gs").value=cs;
+}
+
+function toUpperCase(){
+var os = document.getElementById("gs").value;
+var cs = os.toUpperCase();
+document.getElementById("gs").value=cs;
+}
+</script>
 
 </body>
 </html>
