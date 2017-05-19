@@ -8,8 +8,7 @@
 <h1> This is the raw example </h1>
 
 <textarea id="input">
-342 Alvin Road
-Ducksburg</textarea>
+</textarea>
 
 
 <button type="button" onclick="base64EncodeFunction()">b64->en</button>
