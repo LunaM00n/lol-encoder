@@ -7,23 +7,24 @@
 
 <h1> This is the raw example </h1>
 
-<textarea id="input">
-</textarea>
-
-
-<button type="button" onclick="base64EncodeFunction()">b64->en</button>
-<button type="button" onclick="base64DecodeFunction()">b64->de</button>
+<fieldset>Concat Function (eisikway)<br>
+String 1<input type="text" id="firstname">
+<br>
+String 2<input type="text" id="lastname">
+<br>
+<button type="button" onclick="concat()">Concat</button><br>
+Output<br><textarea id="name"></textarea>
+</fieldset>
 
 <script>
-var input=document.getElementById("input").value;
-
-function base64EncodeFunction(){
-	document.getElementById("input").value = btoa(input);
+function concat(){
+var fname = document.getElementById('firstname').value;
+var lname = document.getElementById('lastname').value;
+var symbol=prompt("Symbol?");
+var name=fname.concat(symbol,lname);
+document.getElementById('name').value=name;
 }
 
-function base64DecodeFunction(){
-	document.getElementById("input").value = atob(input);
-}
 </script>
 </body>
 </html>
