@@ -7,7 +7,7 @@
 
 <h1> This is the raw example </h1>
 
-<fieldset><b>Concat Function</b> (eisikway)<br>
+<fieldset><b>Concat</b> (eisikway)<br>
 String 1<input type="text" id="firstname">
 <br>
 String 2<input type="text" id="lastname">
@@ -27,7 +27,7 @@ document.getElementById('name').value=name;
 
 </script>
 
-<fieldset><b>Encoding Function</b> (@art0flunam00n)<br>
+<fieldset><b>Encoder</b> (@art0flunam00n)<br>
 String<br><textarea id="in"></textarea>
 <button type="button" onclick="base64encode()">b64->en</button>
 <button type="button" onclick="base64decode()">b64->en</button><br>
@@ -44,5 +44,22 @@ function base64decode(){
 }
 
 </script>
+
+<fieldset><b>Repeater</b> (@art0flunam00n)<br>
+String<br><textarea id="repeat"></textarea>
+Number of Repeat <input type="text" id="number"><br>
+<button type="button" onclick="repeaterFunction()">b64->en</button>
+</fieldset>
+
+<script>
+function repeaterFunction(){
+	var input=document.getElementById('repeat').value;
+	var num=document.getElementById('number').value;
+	document.getElementById('repeat').value=input.repeat(num);
+}
+
+</script>
+
+
 </body>
 </html>
