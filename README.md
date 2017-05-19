@@ -1,7 +1,7 @@
 # lol-encoder
 This project made by my students. 
 
-# encoding
+# Encoding
 1.Base64 Encode / Decode
 
 # Contributers
