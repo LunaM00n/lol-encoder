@@ -37,11 +37,23 @@ document.getElementById('name').value=name;
 <button type="button" onclick="urlencodeFunction()">url->en</button>
 <button type="button" onclick="urldecodeFunction()">url->de</button>
 <button type="button" onclick="hexFunction()">ascii->hex</button>
+<button type="button" onclick="charCodeFunction()">ascii->charCode()</button>
 
 <br>
 </fieldset>
 
 <script>
+function charCodeFunction() {
+var input=document.getElementById('in').value;
+var array=[]; 
+for(i=0;i<input.length;++i) //count input length
+{ 
+var c= input.charCodeAt(i); //convert charater into unicode
+array.push(c); //insert into array
+}
+document.getElementById("in").value = 'CHAR('+array.toString()+ ')' ; 
+}
+
 function base64encode(){
 	var input=document.getElementById('in').value;
 	document.getElementById('in').value=btoa(input);
@@ -70,7 +82,7 @@ function ascii_to_hexa(str){
 	for (var n = 0, l = str.length; n < l; n ++) 
      {
 		var hex = Number(str.charCodeAt(n)).toString(16);
-		arr1.push("&#x00"+hex+";");
+		arr1.push("%"+hex);
 	 }
 	return arr1.join('');
    }
@@ -152,9 +164,9 @@ document.getElementById("gs").value=cs;
 
 </script>
 
-
 <!-- New Style  -->
 
 
 </body>
 </html>
+
